@@ -12,8 +12,8 @@ Example command to run this image:
 
 Following environment varaiables can be used:
 
-- `INFLUXDB_HOST` (default: localhost)
-- `INFLUXDB_PORT` (default: 8086)
+- `INFLUXDB_HOST` or `INFLUXDB_MASTER_SERVICE_HOST` (default: localhost)
+- `INFLUXDB_PORT` or `INFLUXDB_MASTER_SERVICE_PORT` (default: 8086)
 - `INFLUXDB_DATABASE` (default: site_dev)
 - `INFLUXDB_USERNAME` (default: root)
 - `INFLUXDB_PASSWORD` (default: root)
