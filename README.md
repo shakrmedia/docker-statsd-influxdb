@@ -8,7 +8,7 @@ Out-of-the-box StatsD + InfluxDB backend image for Docker
 
 Example command to run this image:
 
-    docker run -p 8125:8125 -e "INFLUXDB_HOST=localhost" -e "INFLUXDB_DATABASE=site_dev" -e "INFLUXDB_USERNAME=username" -e "INFLUXDB_PASSWORD=password" -e "STATSD_DEBUG=true" shakr/statsd-influxdb
+    docker run -p 8125:8125/udp -e "INFLUXDB_HOST=localhost" -e "INFLUXDB_DATABASE=site_dev" -e "INFLUXDB_USERNAME=username" -e "INFLUXDB_PASSWORD=password" -e "STATSD_DEBUG=true" shakr/statsd-influxdb
 
 Following environment varaiables can be used:
 
