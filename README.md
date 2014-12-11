@@ -1,4 +1,4 @@
-docker-statsd-influxdb
+docker-statsd-influxdb [![wercker status](https://app.wercker.com/status/eb092421caa7bd703ac332444f7e978b/s "wercker status")](https://app.wercker.com/project/bykey/eb092421caa7bd703ac332444f7e978b)
 ======================
 
 Out-of-the-box StatsD + InfluxDB backend image for Docker
