@@ -15,6 +15,6 @@
     }
   },
   port: process.env.STATSD_PORT || 8125,
-  debug: process.env.STATSD_DEBUG || true,
+  debug: process.env.STATSD_DEBUG || false,
   backends: ['statsd-influxdb-backend']
 }
