@@ -12,4 +12,4 @@ ADD config.js /statsd/config.js
 EXPOSE 8125/udp
 EXPOSE 8126/tcp
 
-CMD node /statsd/stats.js /statsd/config.js
+CMD /usr/local/bin/node /statsd/stats.js /statsd/config.js
