@@ -19,3 +19,6 @@ Following environment varaiables can be used:
 - `INFLUXDB_PASSWORD` (default: root)
 - `STATSD_PORT` (default: 8125)
 - `STATSD_DEBUG` (default: false)
+- `STATSD_ENABLE_FLUSH` (default: true)
+- `STATSD_ENABLE_PROXY` (default: false)
+- `STATSD_PROXY_FLUSH_INTERVAL` (default: 1000)

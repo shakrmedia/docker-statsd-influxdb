@@ -24,12 +24,12 @@
       username: process.env.INFLUXDB_USERNAME || "root",
       password: process.env.INFLUXDB_PASSWORD || "root",
       flush: {
-        enable: true
+        enable: (process.env.STATSD_ENABLE_FLUSH || "true").toLowerCase() === "true"
       },
       proxy: {
-        enable: false,
+        enable: (process.env.STATSD_ENABLE_PROXY || "false").toLowerCase() === "true",
         suffix: 'raw',
-        flushInterval: 1000
+        flushInterval: parseInt(process.env.STATSD_PROXY_FLUSH_INTERVAL) || 1000
       }
     },
     port: parseInt(process.env.STATSD_PORT) || 8125,
