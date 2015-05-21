@@ -3,6 +3,9 @@ docker-statsd-influxdb [![wercker status](https://app.wercker.com/status/eb09242
 
 Out-of-the-box StatsD + InfluxDB backend image for Docker
 
+## Introduction
+
+This Docker container is based on [`node:slim`](https://registry.hub.docker.com/u/library/node/) and runs a StatsD instance with backend support for InfluxDB. All settings for the StatsD instance to connect with InfluxDB can be provided using environmental variables.
 
 ## Running
 
