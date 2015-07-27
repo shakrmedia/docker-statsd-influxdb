@@ -7,13 +7,13 @@ Out-of-the-box StatsD + InfluxDB backend container for Docker
 
 This Docker container is based on [`node:slim`](https://registry.hub.docker.com/u/library/node/) and runs a [`StatsD`](https://github.com/etsy/statsd/) network daemon with native backend support for [`InfluxDB`](https://github.com/influxdb/influxdb/tree/master) using the [`statsd-influxdb-backend`](https://github.com/bernd/statsd-influxdb-backend) node.js package. All settings for the [`StatsD`](https://github.com/etsy/statsd/) daemon to connect with [`InfluxDB`](https://github.com/influxdb/influxdb/tree/master) can be provided using environmental variables.
 
-The current version [`statsd-influxdb-backend v0.6.0`](https://github.com/bernd/statsd-influxdb-backend) included in this container supports [`InfluxDB`](https://github.com/influxdb/influxdb/tree/master) versions `v0.8` and `v0.9`.
+The node package [`statsd-influxdb-backend`](https://github.com/bernd/statsd-influxdb-backend) `v0.6.0` included in this container supports [`InfluxDB`](https://github.com/influxdb/influxdb/tree/master) versions `v0.8` and `v0.9`.
 
 ## Considerations
 
-- The default version of [`InfluxDB`](https://github.com/influxdb/influxdb/tree/master) for this container is `v0.8`, use the `INFLUXDB_VERSION` environment variable to specify [`InfluxDB v0.9`](https://github.com/influxdb/influxdb/tree/master)
-- Ensure that any programs that you are using with the [`StatsD`](https://github.com/etsy/statsd/)/[`InfluxDB`](https://github.com/influxdb/influxdb/tree/master) stack support `v0.9`, support in the community is still being finalised
-- [`InfluxDB v0.9`](https://github.com/influxdb/influxdb/tree/master) currently has no upgrade tool from `v0.8`, so you will need to start with a fresh database
+- The default version of [`InfluxDB`](https://github.com/influxdb/influxdb/tree/master) for this container is `v0.8`, use the `INFLUXDB_VERSION` environment variable to specify `v0.9`
+- [`InfluxDB`](https://github.com/influxdb/influxdb/tree/master) `v0.9` currently has no upgrade tool from `v0.8`, you will need to start with a fresh database
+- Ensure that any programs that you are using with the [`StatsD`](https://github.com/etsy/statsd/)/[`InfluxDB`](https://github.com/influxdb/influxdb/tree/master) stack support `v0.9`, support in the community is still being finalised and you may lose functionality by moving to the new version
 
 ## Running
 
