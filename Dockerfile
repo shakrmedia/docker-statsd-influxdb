@@ -1,8 +1,8 @@
-# DOCKER-VERSION 1.6
+# DOCKER-VERSION 1.10
 # AUTHOR: Minku Lee <minku@sha.kr>
 # DESCRIPTION: Out-of-the-box StatsD + InfluxDB backend image for Docker
 
-FROM node:0.12.7-slim
+FROM node:4.1.1-slim
 
 RUN apt-get update && apt-get install -y git
 RUN git clone https://github.com/etsy/statsd.git

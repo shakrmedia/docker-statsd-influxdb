@@ -21,7 +21,7 @@
       host: host,
       port: port,
       version: process.env.INFLUXDB_VERSION || "0.8",
-      ssl: process.env.INFLUXDB_SSL || "false",
+      ssl: (process.env.INFLUXDB_SSL || "false").toLowerCase() === "true",
       database: process.env.INFLUXDB_DATABASE || "site_dev",
       username: process.env.INFLUXDB_USERNAME || "root",
       password: process.env.INFLUXDB_PASSWORD || "root",
